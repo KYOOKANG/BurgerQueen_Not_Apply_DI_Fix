@@ -2,6 +2,8 @@ package app.product.subproduct;
 
 import app.product.Product;
 
+import static app.product.ProductRepository.NEW_PRODUCT_ID;
+
 
 public class Hamburger extends Product {
     private boolean isBurgerSet;
@@ -14,6 +16,16 @@ public class Hamburger extends Product {
         super(id, name, price, kcal);
         this.isBurgerSet = isBurgerSet;
         this.burgerSetPrice = burgerSetPrice;
+    }
+    public Hamburger(Hamburger hamburger) {
+        this(
+                NEW_PRODUCT_ID,
+                hamburger.getName(),
+                hamburger.getPrice(),
+                hamburger.getKcal(),
+                hamburger.isBurgerSet(),
+                hamburger.getBurgerSetPrice()
+        );
     }
 
     public boolean isBurgerSet() {

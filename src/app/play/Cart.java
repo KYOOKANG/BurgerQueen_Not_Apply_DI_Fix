@@ -123,9 +123,13 @@ public class Cart {
             if(h.isBurgerSet()) product = composeSet(h);
         }
 
+        if (product instanceof Hamburger)   newProduct = new Hamburger((Hamburger) product);
+        else if (product instanceof Side)   newProduct = new Side((Side) product);
+        else if (product instanceof Drink)  newProduct = new Drink((Drink) product);
+        else                                newProduct = (BurgerSet) product;
 
         items = Arrays.copyOf(items, items.length);
-        items[items.length-1] = product;
+        items[items.length-1] = newProduct;
 
         System.out.printf("[📣] %s를(을) 장바구니에 담았습니다.\n", product);
     }
