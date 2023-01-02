@@ -1,7 +1,6 @@
 package app.play;
 
-import app.discount.discountCondition.CozDiscountCondition;
-import app.discount.discountCondition.KidDiscountCondition;
+import app.discount.discountCondition.*;
 
 public class Order {
     private Cart cart;

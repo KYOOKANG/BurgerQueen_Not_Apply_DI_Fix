@@ -1,10 +1,7 @@
 package app.play;
 
 import app.product.Product;
-import app.product.ProductRepository;
-import app.product.subproduct.Drink;
-import app.product.subproduct.Hamburger;
-import app.product.subproduct.Side;
+import app.product.subproduct.*;
 
 import java.util.Scanner;
 

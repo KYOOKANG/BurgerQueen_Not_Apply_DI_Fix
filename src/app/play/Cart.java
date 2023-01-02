@@ -1,11 +1,7 @@
 package app.play;
 
-import app.product.Product;
-import app.product.ProductRepository;
-import app.product.subproduct.BurgerSet;
-import app.product.subproduct.Drink;
-import app.product.subproduct.Hamburger;
-import app.product.subproduct.Side;
+import app.product.*;
+import app.product.subproduct.*;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -151,7 +147,7 @@ public class Cart {
         chooseOption(drink);
 
 
-        String name = hamburger + "세트";
+        String name = hamburger.getName() + "세트";
         int price = hamburger.getBurgerSetPrice();
         int kcal = hamburger.getKcal() + side.getKcal() + drink.getKcal();
 

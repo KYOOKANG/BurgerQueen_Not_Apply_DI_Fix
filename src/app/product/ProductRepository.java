@@ -1,8 +1,6 @@
 package app.product;
 
-import app.product.subproduct.Drink;
-import app.product.subproduct.Hamburger;
-import app.product.subproduct.Side;
+import app.product.subproduct.*;
 
 public class ProductRepository {
     final public static int NEW_PRODUCT_ID = -1;

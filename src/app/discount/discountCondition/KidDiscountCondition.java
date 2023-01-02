@@ -1,12 +1,10 @@
 package app.discount.discountCondition;
 
 import app.discount.discountPolicy.FixedAmountDiscountPolicy;
-import app.discount.discountPolicy.FixedRateDiscountPolicy;
 
 import java.util.Scanner;
 
 import static app.discount.discountPolicy.FixedAmountDiscountPolicy.FIXED_AMOUNT;
-import static app.discount.discountPolicy.FixedRateDiscountPolicy.FIXED_RATE;
 
 public class KidDiscountCondition {
     private boolean isSatisfied;
