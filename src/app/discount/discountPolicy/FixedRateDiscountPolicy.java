@@ -9,6 +9,6 @@ public class FixedRateDiscountPolicy {
     }
 
     public int calculateDiscountedPrice(int price) {
-        return price * (100 - price)/100;
+        return price * (100 - discountRate)/100;
     }
 }
