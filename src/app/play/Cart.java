@@ -67,7 +67,7 @@ public class Cart {
                         burgerSet.getName(),
                         burgerSet.getPrice(),
                         burgerSet.getSide().getName(),
-                        burgerSet.getSide().getPrice(),
+                        burgerSet.getSide().getKetchup(),
                         burgerSet.getDrink().getName(),
                         burgerSet.getDrink().hasStraw() ? "있음" : "없음"
                 );
@@ -128,7 +128,7 @@ public class Cart {
         else if (product instanceof Drink)  newProduct = new Drink((Drink) product);
         else                                newProduct = (BurgerSet) product;
 
-        items = Arrays.copyOf(items, items.length);
+        items = Arrays.copyOf(items, items.length+1);
         items[items.length-1] = newProduct;
 
         System.out.printf("[📣] %s를(을) 장바구니에 담았습니다.\n", product);
