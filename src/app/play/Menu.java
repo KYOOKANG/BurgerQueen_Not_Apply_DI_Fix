@@ -25,7 +25,7 @@ public class Menu {
         printDrinks(true);
 
         System.out.println();
-        System.out.println("🧺 (0) 장바구니");
+        System.out.println("🛒 (0) 장바구니");
         System.out.println("📦 (+) 주문하기");
         System.out.println("-".repeat(60));
         System.out.print("[📣] 메뉴를 선택해주세요 : ");
