@@ -20,7 +20,11 @@ public class Hamburger extends Product {
         return isBurgerSet;
     }
 
-    public void setBurgerSet(boolean burgerSet) {
+    public void setIsBurgerSet(boolean burgerSet) {
         isBurgerSet = burgerSet;
+    }
+
+    public int getBurgerSetPrice() {
+        return burgerSetPrice;
     }
 }

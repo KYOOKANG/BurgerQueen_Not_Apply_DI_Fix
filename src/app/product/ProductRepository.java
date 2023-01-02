@@ -5,6 +5,7 @@ import app.product.subproduct.Hamburger;
 import app.product.subproduct.Side;
 
 public class ProductRepository {
+    final public static int NEW_PRODUCT_ID = -1;
     Product[] products = new Product[] {
             new Hamburger(1, "새우버거", 3500, 500, 4500),
             new Hamburger(2, "치킨버거", 4000, 600, 5000),

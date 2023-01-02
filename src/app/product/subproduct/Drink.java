@@ -13,4 +13,12 @@ public class Drink extends Product {
         super(id, name, price, kcal);
         this.hasStraw = hasStraw;
     }
+
+    public boolean hasStraw() {
+        return hasStraw;
+    }
+
+    public void setHasStraw(boolean hasStraw) {
+        this.hasStraw = hasStraw;
+    }
 }

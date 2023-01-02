@@ -28,4 +28,7 @@ public class Product {
     public int getKcal() {
         return kcal;
     }
+
+    public String toString() { return this.getName(); }
+
 }

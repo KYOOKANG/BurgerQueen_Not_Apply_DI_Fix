@@ -31,7 +31,7 @@ public class Menu {
         System.out.print("[📣] 메뉴를 선택해주세요 : ");
     }
 
-    private void printDrinks(boolean isShow) {
+    protected void printDrinks(boolean isShow) {
         System.out.println("🥤 음료");
         for(Product p: products) {
             if(p instanceof Drink) {
@@ -41,7 +41,7 @@ public class Menu {
         System.out.println();
     }
 
-    private void printSides(boolean isShow) {
+    protected void printSides(boolean isShow) {
         System.out.println("🍟 사이드");
         for(Product p: products) {
             if(p instanceof Side) {
@@ -51,7 +51,7 @@ public class Menu {
         System.out.println();
     }
 
-    private void printHamburgers(boolean isShow) {
+    protected void printHamburgers(boolean isShow) {
         System.out.println("🍔 햄버거");
         for(Product p: products) {
             if(p instanceof Hamburger) {
