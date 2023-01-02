@@ -22,15 +22,29 @@ public class OrderApp {
 //                사용자가 고른 상품의 옵션을 보여주고 고르게 한 후, 장바구니에 담기
 //            }
 //        }
+        Scanner scan = new Scanner(System.in);
+
         ProductRepository productRepository = new ProductRepository();
         Product[] products = productRepository.getAllProducts();
         Menu menu = new Menu(products);
+        Cart cart = new Cart(productRepository, menu);
 
         System.out.println("🍔 BurgerQueen Order Service");
-        menu.printMenu();
+        while (true) {
+            menu.printMenu();
+            String input = scan.nextLine();
 
-        Scanner scan = new Scanner(System.in);
-        String input = scan.nextLine();
+            switch(input) {
+                case "+":   /*order.print();*/  return;     // 주문내역 출력
+                case "0":   cart.printCart();   break;
+                default:
+                    int id = Integer.parseInt(input);
+                    for(Product p: products) {
+                        if(p.getId() == id)
+                            cart.addToCart(id);
+                    }
+            }
+        }
     }
 
 }
