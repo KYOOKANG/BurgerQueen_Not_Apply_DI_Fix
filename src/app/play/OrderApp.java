@@ -28,6 +28,7 @@ public class OrderApp {
         Product[] products = productRepository.getAllProducts();
         Menu menu = new Menu(products);
         Cart cart = new Cart(productRepository, menu);
+        Order order = new Order(cart);
 
         System.out.println("🍔 BurgerQueen Order Service");
         while (true) {
@@ -35,7 +36,7 @@ public class OrderApp {
             String input = scan.nextLine();
 
             switch(input) {
-                case "+":   /*order.print();*/  return;     // 주문내역 출력
+                case "+":   order.makeOrder();  return;     // 주문내역 출력 후 종료
                 case "0":   cart.printCart();   break;
                 default:
                     int id = Integer.parseInt(input);

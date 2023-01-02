@@ -39,7 +39,7 @@ public class Cart {
         scan.nextLine();
     }
 
-    private void printCartItemDetails() {
+    protected void printCartItemDetails() {
         for(Product item: items) {
             if(item instanceof Hamburger) {
                 System.out.printf("  %-8s %6d원 (단품)\n",
@@ -75,7 +75,7 @@ public class Cart {
         }
     }
 
-    private int calculateTotalPrice() {
+    protected int calculateTotalPrice() {
         int result = 0;
         for(Product item: items) {
             result += item.getPrice();
