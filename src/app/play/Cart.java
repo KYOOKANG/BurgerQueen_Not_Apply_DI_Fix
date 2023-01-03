@@ -127,7 +127,7 @@ public class Cart {
         items = Arrays.copyOf(items, items.length+1);
         items[items.length-1] = newProduct;
 
-        System.out.printf("[📣] %s를(을) 장바구니에 담았습니다.\n", product);
+        System.out.printf("[📣] %s를(을) 장바구니에 담았습니다.\n", product.getName());
     }
 
     private BurgerSet composeSet(Hamburger hamburger) {
@@ -151,6 +151,12 @@ public class Cart {
         int price = hamburger.getBurgerSetPrice();
         int kcal = hamburger.getKcal() + side.getKcal() + drink.getKcal();
 
-        return new BurgerSet(NEW_PRODUCT_ID, name, price, kcal, hamburger, side, drink);
+        return new BurgerSet(
+                NEW_PRODUCT_ID,
+                name, price, kcal,
+                new Hamburger(hamburger),
+                new Side(side),
+                new Drink(drink)
+        );
     }
 }

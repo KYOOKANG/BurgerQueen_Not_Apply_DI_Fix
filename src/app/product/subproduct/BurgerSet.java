@@ -2,6 +2,8 @@ package app.product.subproduct;
 
 import app.product.Product;
 
+import static app.product.ProductRepository.NEW_PRODUCT_ID;
+
 public class BurgerSet extends Product {
     private Hamburger hamburger;
     private Side side;
